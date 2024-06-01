@@ -5,5 +5,12 @@ resource "aws_instance" "TF_Second_EC2" {
   tags = {
     Name = "local-exec"
   }
+
+  provisioner "local-exec" {    
+    command = "echo ${self.tags.Name} = ${self.private_ip} >> ips.txt"
+  }
+  provisioner "local-exec" {    
+    command = "echo ${self.tags.Name} = ${self.public_ip} >> ips.txt"
+  }
 }
 

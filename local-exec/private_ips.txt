@@ -1,0 +1,4 @@
+aws_instance.TF_Second_EC2.tags.Name = 172.31.16.64 
+aws_instance.TF_Second_EC2.tags.Name = 54.161.49.196 
+local-exec = 172.31.19.10 
+local-exec = 3.84.137.190 
